@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C0FC137-C577-4D43-B2EC-79BC0DE69900}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BoxVsBlock</RootNamespace>
+    <AssemblyName>BoxVsBlock</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GamePlay\GameScoreText.cs" />
+    <Compile Include="GamePlay\LineElements\Block.cs" />
+    <Compile Include="GamePlay\LineElements\Bonus.cs" />
+    <Compile Include="GamePlay\GameLine.cs" />
+    <Compile Include="GamePlay\LineElements\GameLineObject.cs" />
+    <Compile Include="GamePlay\Level.cs" />
+    <Compile Include="GamePlay\LinesHolder.cs" />
+    <Compile Include="GamePlay\LineElements\Live.cs" />
+    <Compile Include="GamePlay\Map.cs" />
+    <Compile Include="GamePlay\PlayerBox.cs" />
+    <Compile Include="GamePlay\PlayerInput.cs" />
+    <Compile Include="GamePlay\PlayersCamera.cs" />
+    <Compile Include="Menu\MenuDeath\ButtonRevivePlayer.cs" />
+    <Compile Include="Menu\MenuDeath\DeathSign.cs" />
+    <Compile Include="Menu\MenuDeath\ScreenDeath.cs" />
+    <Compile Include="Menu\MenuDeath\ButtonTapToContinue.cs" />
+    <Compile Include="Menu\MenuMain\BoxVsBlockHeader.cs" />
+    <Compile Include="Menu\MenuMain\PlayButton.cs" />
+    <Compile Include="Menu\MenuMain\Record.cs" />
+    <Compile Include="Menu\MenuMain\RecordStar.cs" />
+    <Compile Include="Menu\MenuMain\RecordStarAndScore.cs" />
+    <Compile Include="Menu\MenuMain\ScreenMain.cs" />
+    <Compile Include="Menu\MenuGame\ScreenGame.cs" />
+    <Compile Include="Menu\Options.cs" />
+    <Compile Include="Menu\Score.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextProperties\ContentProperties.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentProperties.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v7.1\Mono.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.Portable.3.6.0.1625\lib\portable-net45+win8+wpa81\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Menu\Persistance\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TextProperties\ContentProperties.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentProperties.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GameEngine\GameEngine.csproj">
+      <Project>{683783B8-E218-4CCB-8CE0-756DDC74ED06}</Project>
+      <Name>GameEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

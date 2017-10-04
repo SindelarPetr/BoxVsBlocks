@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="box_vs_Blocks.Box_vs_Blocks" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" />
+	<application android:label="Box vs Blocks" android:icon="@drawable/Icon"></application>
+</manifest>
