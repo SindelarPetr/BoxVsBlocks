@@ -10,11 +10,18 @@
   <strong>A multiplatform game where you lead your box through the map to get as much points as possible! A great addictive game for spending free time.</strong>
   <br>
   <br>
+  <a href="https://play.google.com/store/apps/details?id=box_vs_Blocks.Box_vs_Blocks"><img src="https://lh3.googleusercontent.com/cjsqrWQKJQp9RFO7-hJ9AfpKzbUb_Y84vXfjlP0iRHBvladwAfXih984olktDhPnFqyZ0nu9A5jvFwOEQPXzv7hr3ce3QVsLN8kQ2Ao=s0"></a>
+  <br>
+  
+  <br>
   <a href="https://github.com/SindelarPetr/BoxVsBlocks/issues/new?template=bug_report.md">Report bug</a>
   ·
   <a href="https://github.com/SindelarPetr/BoxVsBlocks/issues/new?template=feature_request.md">Request feature</a>
   ·
   <a href="https://play.google.com/store/apps/details?id=box_vs_Blocks.Box_vs_Blocks">Play Store</a>
+  
+  <br>
+  <br>
 </p>
 
 <p align="center">
